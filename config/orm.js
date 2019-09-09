@@ -1,10 +1,13 @@
 var connection = require("./connection.js");
 
 var orm = {
-    selectAll: function (tableInput, cb) {
-        connection.query("SELECT * FROM" + tableInput + ";", function (err, result) {
+    selectAll: function (input, cb) {
+        connection.query("SELECT * FROM" + input + ";", function (err, result) {
             if (err) throw err;
             cb(result); 
         })
     }
 }
+
+module.exports = orm; 
+
