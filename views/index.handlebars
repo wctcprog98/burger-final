@@ -1,23 +1,30 @@
 <div class="container">
     <div class="row">
-        <div class="col-6"> 
+        <div class="col-6">
             <h1>EAT DA BURGERs</h1>
         </div>
-    <div class="col-6">
-        <div class="row">
-            {{#each burgerInfo}}
-            {{#unless this.devoured}}
-        <div class="col-3">
-            <pre>{{this.id}}. {{this.burger_name}}</pre>
-        </div>
         <div class="col-6">
-            <form method ="POST" action="/burger/update?_method=PUT" class="button">
-            <input type="text" name="burger_id" value={{this.id}}>
-            <br>
-            <button type="submit" class = "btn btn-link">
-                DEVOUR IT!
-            </button>
-            </form>
+            <div class="row">
+                {{#each burger_data}}
+                {{#unless this.devoured}}
+                <div class="col-3">
+                    <pre>{{this.id}}. {{this.burger_name}}</pre>
+                </div>
+                <div class="col-6">
+                    <form method="POST" action="/burger/update?_method=PUT" class="button">
+                        <input type="text" name="burger_id" value={{this.id}}>
+                        <br>
+                        <button type="submit" class="btn btn-link">
+                            DEVOUR IT!
+                        </button>
+                    </form>
+                    </div>
+                        {{/unless}}
+                        {{/each}}
+
+                    </div>
+                </div>
+                </div>
+            </div>
             
-    </div>
-    </div>
+    
