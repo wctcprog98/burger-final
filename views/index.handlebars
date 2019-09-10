@@ -18,13 +18,26 @@
                             DEVOUR IT!
                         </button>
                     </form>
-                    </div>
-                        {{/unless}}
-                        {{/each}}
-
-                    </div>
                 </div>
-                </div>
+                {{/unless}}
+                {{/each}}
             </div>
-            
-    
+        </div>
+        <div class="col-6">
+            {{#each burger_data}}
+                {{#if this.devoured}}
+                <input class="form-control" type="text" "{{this.id}}. {{this.burger_name}}" readonly>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</div>
+<div class="submitform">
+    <form action="/burgers/create" method="POST">
+        <input type="text">
+        <button type="submit" class="btn btn-secondary">SUBMIT</button>
+    </form>
+    <p>Enter in a burger you would like to eat!</p>
+</div>
+</div>
+</div>

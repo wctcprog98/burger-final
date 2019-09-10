@@ -8,6 +8,13 @@ router.get("/", function (req, res) {
         res.render("index",{burger_data});
     })
    
+})
+
+router.put('/burgers/update',function(req, res) {
+    burger.update(req.body.burger_id, function (result)
+    {
+        res.redirect("/");
+    });
 });
 
 module.exports = router; 
