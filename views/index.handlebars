@@ -6,38 +6,22 @@
         <div class="col-xs-6">
             <div class="row">
                 {{#each burger_data}}
-                {{#unless this.devoured}}
+                    {{#unless this.devoured}}
+                    <div class="col-xs-9">
+                        <pre>
+                            {{this.id}}. {{this.burger_name}}
+                        </pre>
+                    </div>
                 <div class="col-xs-3">
-                    <pre>{{this.id}}. {{this.burger_name}}</pre>
-                </div>
-                <div class="col-xs-6">
-                    <form method="POST" action="/burgers/update?_method=PUT" class="button-size">
-                        <input type="hidden" name="burger_id" type="text" value={{this.id}}>
-                        <br>
-                        <button type="submit" class="btn btn-default">
-                            DEVOUR IT!
-                        </button>
+                    <form method = "POST" action="/burgers/update?_method=PUT" class="subButton">
+                    <input type="hidden" name="burger_id" type="text" value={{this.id}}>
+                    <br>
+                    <button type="submit" class="btn btn-primary">DEVOUR IT!</button>
                     </form>
                 </div>
                 {{/unless}}
                 {{/each}}
-            </div>
-        </div>
-        <div class="col-6">
-            {{#each burger_data}}
-                {{#if this.devoured}}
-                <input class="form-control" type="text" "{{this.id}}. {{this.burger_name}}" readonly>
-            {{/if}}
-            {{/each}}
+             </div>  
         </div>
     </div>
-</div>
-<div class="submitform">
-    <form action="/burgers/create" method="POST">
-        <input type="text">
-        <button type="submit" class="btn btn-secondary">SUBMIT</button>
-    </form>
-    <p>Enter in a burger you would like to eat!</p>
-</div>
-</div>
 </div>

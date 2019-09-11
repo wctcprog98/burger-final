@@ -2,7 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars")
 var methodOverride = require("method-override");
-
+var path = require("express"); 
 var app = express();
 app.use(bodyParser.urlencoded({
 extended: false 
@@ -22,7 +22,7 @@ app.set("view engine", "handlebars");
 var PORT = process.env.PORT || 8080;
 
 //setup routes
-var routes = require("./controllers/burgers_controller");
+var routes = require("./controllers/router");
 app.use('/', routes); 
 
 app.listen(PORT, function () {
