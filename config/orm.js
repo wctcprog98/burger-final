@@ -7,21 +7,21 @@ var orm = {
       if (err) throw err;
       cb(result)
     })
+  },
+  
+  update: function(input, cond, cb) {
+    connection.query('UPDATE '+input+' SET devoured=true WHERE id=' +cond+ ';', function (err, res) {
+      if (err) throw err;
+      cb(res);
+    })
+  },
+  
+  create: function(input,val,cb){
+    connection.query('INSERT INTO ' + input+" (burger_name) VALUES ('"+val+"');",function(err, result){
+      if(err) throw err;
+      cb(result)
+    })
   }
-  
-//   update: function(input, cond, cb) {
-//     connection.query('UPDATE '+input+' SET devoured=true WHERE id=' +cond+ ';', function (err, res) {
-//       if (err) throw err;
-//       cb(res);
-//     })
-//   },
-  
-//   create: function(input,value,cb){
-//     connection.query('INSERT INTO ' + input+" (burger_name) VALUES ("+val+");",function(err, result){
-//       if(err) throw err;
-//       cb(result)
-//     })
-//   }
 }
 
 
