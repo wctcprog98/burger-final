@@ -1,29 +1,53 @@
-h1
-{
+.top{
     font: bold;
     color: red; 
     font-size: 40px; 
     margin: 0 auto; 
- 
-  
+    text-align: center;   
+    position: relative;
+  top: 0px;
 }
-.btn{
-    height:40px ; 
+#eat {
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    height:40px; 
     width:200px;
-    position:relative;
-    top:50%;
-    left: 39%;
-    margin: 0 auto; 
     background-color: blue;  
 }
-img{
+.subForm{
+    float: right; 
+    display: block;
+
+}
+h1{
+    /* text-align: center;  */
+    text-align: center; 
+    background-color: red' 
+
+}
+#enter_text{
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+   height: 100px;
+   width: 300px; 
+   margin-top:50px; 
+}
+.pic{
     height:200px; 
     width:200px;
-    position:relative;
-    top:50%;
-    left: 39%;
-    margin: 0 auto; 
-    color: black; 
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+#submission{
+    text-align: center;   
+}
+#eat{
+    margin-left: auto;
+    margin-right: auto;
 }
 body{
     background-color: yellow; 
@@ -31,6 +55,14 @@ body{
 
 .container{
     margin: 0 auto; 
+}
+#subButton{
+    align-content: center; 
+}
+.containerBtm{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
 }
 /* .btn{
     height:50px; 
@@ -43,6 +75,8 @@ body{
 }  */
 
 p{
+    /* position: absolute;
+    bottom: 25px; */
     text-align: center; 
 }
 .form-group,
@@ -50,14 +84,17 @@ p{
     width: 35%; 
     margin: 0 auto;
 }
+/* pre{ 
+  
+
+} */
+/* .btn{
+   float: none; 
+   text-align: center;
+  
+} */
 body{
     background-color: yellow;
-}
-.images{
-    background-color: yellow; 
-}
-submit{
-    text-emphasis: center;
 }
 
 /* Additional Screen Sizes */
