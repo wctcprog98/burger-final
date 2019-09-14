@@ -43,11 +43,12 @@ h1{
    
 }
 #submission{
-    text-align: center;   
-}
-#eat{
+    display: block; 
     margin-left: auto;
     margin-right: auto;
+    height:40px; 
+    width:200px;
+    background-color: blue;  
 }
 body{
     background-color: yellow; 
@@ -56,23 +57,18 @@ body{
 .container{
     margin: 0 auto; 
 }
-#subButton{
-    align-content: center; 
-}
+
 .containerBtm{
     margin-left: auto;
     margin-right: auto;
     text-align: center; 
 }
-/* .btn{
+.btn{
     height:50px; 
     width:100px;
-    position:relative;
-    top:50%; 
-    left:50%;
-    margin: 0 auto; 
+   
     background-color: blue; 
-}  */
+} 
 
 p{
     /* position: absolute;
@@ -93,9 +89,6 @@ p{
    text-align: center;
   
 } */
-body{
-    background-color: yellow;
-}
 
 /* Additional Screen Sizes */
 
